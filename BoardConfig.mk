@@ -140,15 +140,16 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 VENDOR_SECURITY_PATCH := 2020-02-01
 
 # Sepolicy
-include device/mediatek/sepolicy/sepolicy.mk
+#include device/mediatek/sepolicy/sepolicy.mk
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # VNDK
 BOARD_VNDK_VERSION := current
-PRODUCT_EXTRA_VNDK_VERSIONS := 28
+#PRODUCT_EXTRA_VNDK_VERSIONS := 28
 BOARD_VNDK_RUNTIME_DISABLE := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/begonia/BoardConfigVendor.mk
